@@ -86,6 +86,8 @@ def sum_even_numbers_in_list_do_while(list_numbers):
         
         if i >= len(list_numbers):
             break
+        
+    return total_numbers
 
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
