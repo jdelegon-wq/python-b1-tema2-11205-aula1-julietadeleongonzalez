@@ -47,10 +47,13 @@ Exemple:
 """
 
 
-def triangle_area_calculate(
-    base, height):
-    # Write here your code
-    pass
+def triangle_area_calculate(base, height): # Se define la función y los parámetros de ésta
+    # Se escribe el cálculo matemático que resuelve el àrea de un triangulo y se guarda en la variable 'result'
+    if base <= 0 or height <= 0:
+        return None
+    result = (base * height)/2
+    # Se retorna el resultado
+    return result
 
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta
