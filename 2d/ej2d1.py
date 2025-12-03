@@ -48,9 +48,15 @@ Exemple:
 """
 
 
-def kg_to_lb(kg):
+def convert_kg_to_lb(kg):
     # Write here your code
-    pass
+    if not isinstance(kg, (int, float)):
+        raise TypeError("El valor no es numérico")
+    if kg <= 0:
+        raise ValueError("El número introducido es igual o menor a 0, introduce el número de nuevo")
+
+    libras = kg * 2.20462
+    return libras
 
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
