@@ -76,7 +76,11 @@ def factorial(number: int):
 
 def calculate_factorial(number: int):
     # Write here your code
-    pass
+    try:
+        result = factorial(number)
+        return result
+    except Exception as e:
+        return f"An unexpected error has occurred: {e}"
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
