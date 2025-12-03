@@ -68,7 +68,23 @@ Exemple:
 
 def calculate_max_and_min(list_numbers):
     # Write here your code
-    pass
+    if not list_numbers:
+        raise ValueError("La lista está vacía")
+    for i in list_numbers:
+        if not isinstance(i, (int, float)):
+            raise TypeError("El número no es de tipo numérico")
+            
+    min_actual = list_numbers[0]
+    max_actual = list_numbers[0]
+    for i in list_numbers:
+        if i < min_actual:
+            min_actual = i
+            print(f"El mínimo actual es: {i}")
+        if i > max_actual:
+            max_actual = i 
+            print(f"El máximo actual es: {i}")
+    return(min_actual, max_actual)
+        
 
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
